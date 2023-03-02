@@ -12,12 +12,4 @@ section{
   display: flex;
   align-items: center;
 }
-h1 {
-  font-size: 6rem;
-}
-em {
-  color: var(--primary);
-  font-style: normal;
-}
-
 </style>

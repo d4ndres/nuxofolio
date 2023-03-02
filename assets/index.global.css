@@ -1,5 +1,7 @@
 :root{
     --primary: #c66bf0;
+    --secondary: #606062;
+    --secondary-dark: #D1D3D7;
 }
 * {
     margin: 0;
@@ -8,4 +10,25 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+
+p, a{
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+em {
+    color: var(--primary);
+    font-style: normal;
+}

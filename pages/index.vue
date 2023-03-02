@@ -3,6 +3,8 @@
 <template>
   <div>
     <hero/>
+    <introAbout/>
+    
   </div>
 </template>
 
