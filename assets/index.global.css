@@ -18,17 +18,49 @@ h1 {
     font-size: 6rem;
 }
 h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: var(--primary);
 }
 
 
 p, a{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--secondary);
 }
+a {
+    cursor: pointer;
+    overflow: hidden;
+}
+a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    transform: translateX(-100%);
+    border-bottom: 2px solid var(--primary);
+    transition: .4s;
+}
+a:hover::after{
+    transform: translateX(0);
+    overflow: hidden;
+}
+
+
 em {
     color: var(--primary);
     font-style: normal;
+}
+
+.technologies svg path{
+    filter: grayscale(100%);
+    transition: .4s;
+}
+.technologies:hover svg path{
+    filter: grayscale(0);
+}
+
+@media screen and ( max-width: 768px ){
+    html{
+        font-size: 14px;
+    }
 }

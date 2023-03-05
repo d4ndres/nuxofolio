@@ -30,7 +30,8 @@ import { Icon } from '#components'
 }
 main{
   grid-column: span 3;
-  padding: 0 2rem;
+  margin: 0 auto 0 0 ;
+  width: 90%;
 }
 header{
   grid-column: span 1;
@@ -57,5 +58,17 @@ nav{
 
 .p-email{
   font-size: 1rem;
+}
+
+@media screen and ( max-width: 768px){
+  #root{
+    grid-template-columns: 1fr;
+  }
+  main{
+    margin: 0 auto;
+  }
+  header{
+    transform: translateX(100%);
+  }
 }
 </style>
