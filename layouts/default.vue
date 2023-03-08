@@ -4,17 +4,20 @@ import { Icon } from '#components'
 
 <template>
   <div id="root">
+    
+    <CanvasBg/>
+    
     <header>
       <nav>
+        <NuxtLink to="/" class="logo deactivate"><img src="@/public/logocat.png" alt="Logo"></NuxtLink>
         <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="about">About</NuxtLink>
-        <NuxtLink to="portfolio">Portfolio</NuxtLink>
-        <NuxtLink to="contact">Contact</NuxtLink>
-        <div class="social-icons">
+        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/portfolio">Portfolio</NuxtLink>
+        <NuxtLink to="/contact">Contact</NuxtLink>
+        <!-- <div class="social-icons">
           <NuxtLink to=""><Icon size="32" name="uil:github"></Icon></NuxtLink>
           <NuxtLink to=""><Icon size="32" name="logos:codepen-icon"></Icon></NuxtLink>
-        </div>
-        <p class="p-email">d4ndres@gmail.com</p>
+        </div> -->
       </nav>
     </header>
     <main>
@@ -24,6 +27,10 @@ import { Icon } from '#components'
 </template>
 
 <style scoped>
+.canvas {
+  position: absolute;
+}
+
 #root{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -41,7 +48,7 @@ header{
 nav{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
   min-height: 100vh;
   position: fixed;
@@ -56,13 +63,12 @@ nav{
   color: var(--primary)
 }
 
-.p-email{
-  font-size: 1rem;
-}
+
 
 @media screen and ( max-width: 768px){
   #root{
     grid-template-columns: 1fr;
+    overflow: hidden;
   }
   main{
     margin: 0 auto;
@@ -71,4 +77,10 @@ nav{
     transform: translateX(100%);
   }
 }
+a img {
+  width: min(100px, 10vw);
+}
+
+
+
 </style>

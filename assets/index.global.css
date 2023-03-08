@@ -1,7 +1,24 @@
+body {
+    background-color: #1d1d1d;
+}
+* {
+    color: #fff;
+}
+.logo {
+    filter: invert(100%);
+}
+a.active {
+    color: #fff;
+}
+
 :root{
     --primary: #c66bf0;
     --secondary: #606062;
     --secondary-dark: #D1D3D7;
+
+    --wrapper-width: 2rem;
+    --wrapper-height: calc( var(--wrapper-width)  / 1.8 );
+    --size-circle: calc(var(--wrapper-height) / 1.4);
 }
 * {
     margin: 0;
@@ -9,6 +26,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    
 }
 ::-webkit-scrollbar{
     display: none;
@@ -21,6 +39,7 @@ h2 {
     font-size: 3.5rem;
     font-weight: 400;
     color: var(--primary);
+    margin: 1.5rem 0;
 }
 
 
@@ -31,6 +50,7 @@ p, a{
 a {
     cursor: pointer;
     overflow: hidden;
+    display: inline-block;
 }
 a::after {
     content: "";
@@ -44,7 +64,9 @@ a:hover::after{
     transform: translateX(0);
     overflow: hidden;
 }
-
+.deactivate::after{
+    content: none;
+}
 
 em {
     color: var(--primary);
@@ -59,8 +81,49 @@ em {
     filter: grayscale(0);
 }
 
+.btn{
+    border: solid 1px var(--secondary);
+    filter: grayscale(100%);
+    padding: .5rem 1rem;
+    box-shadow: .3rem .3rem 0 1px rgba(0,0,0,.4);
+    margin: .5rem 0;
+    transition: .8s;  
+}
+.btn:hover{
+    border: solid 1px #fff;
+    box-shadow: 0rem 0rem 0 0px rgba(0,0,0,.8);
+    filter: grayscale(0);
+}
+.btn p{
+    transition: .6s;
+}
+.btn:hover p, a.btn:hover {
+    color: #fff;
+
+} 
+.btn path {
+    transition: .6s;
+}
+
+.btn.github path {
+    fill: #000;
+}
+.btn:hover path {
+    fill: #fff;
+}
+
+.btn::after{
+    content: none;
+}
+
 @media screen and ( max-width: 768px ){
     html{
         font-size: 14px;
+    }
+}
+
+@media screen and ( max-width: 375px ){
+    html{
+        font-size: 12px;
     }
 }

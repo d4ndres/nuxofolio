@@ -12,4 +12,9 @@ section{
   display: flex;
   align-items: center;
 }
+@media screen and ( max-width: 768px ){
+  h1 {
+    font-size: 4rem;
+  }
+}
 </style>

@@ -3,7 +3,9 @@
 <template>
   <div>
     <hero/>
-    <introAbout/>
+    <introAbout id="introAbout" />
+    <IntroPortfolio id="introPortfolio"/>
+    <IntroContact id="introContact"/>
     
   </div>
 </template>

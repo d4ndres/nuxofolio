@@ -33,11 +33,10 @@ const technologies = [
         <ul>
           <CardTechnologies :technologies="technologies" title="Web development" />
         </ul>
-        <div class="inline-block">
-          <NuxtLink>
-              More about me
-          </NuxtLink>
-        </div>
+        <NuxtLink class="btn">
+            More about me
+        </NuxtLink>
+        
       </article>
   </section>
 </template>
@@ -55,10 +54,6 @@ h2 {
 
 .hook {
   text-align: justify;
-  
-}
-.inline-block{
-  display: inline-block;
 }
 
 </style>
