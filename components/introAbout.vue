@@ -9,7 +9,21 @@ const technologies = [
   {text: 'Git', icon: 'git-icon'},
   {text: 'Figma', icon: 'figma'},
   {text: 'VSCode', icon: 'visual-studio-code'},
-
+]
+const allTechonologies = [
+  {text: 'PyTorch', icon: 'pythorch-icon'},
+  {text: 'Django', icon: 'django-icon'},
+  {text: 'OpenCV', icon: 'opencv'},
+  {text: 'C', icon: 'c'},
+  {text: 'C++', icon: 'c-plusplus'},
+  {text: 'Arduino', icon: 'arduino'},
+  {text: 'java', icon: 'java'},
+  {text: 'Docker', icon: 'docker'},
+  {text: 'Bulma', icon: 'bulma'},
+  {text: 'Bulma', icon: 'bulma'},
+  {text: 'Lodash', icon: 'lodash'},
+  {text: 'Mysql', icon: 'myslq-icon'},
+  {text: 'python', icon: 'python'},
 ]
 
 </script>
